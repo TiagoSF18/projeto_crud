@@ -7,16 +7,16 @@ class Usuario{
   public function getId(){
     return $this->id;
   }
-  public function setId(){
+  public function setId($i){
     // trim para facilitar caso queira futuramente alterar o parametro para outro tipo de dado
     $this->id = trim($i);
   }
-  public funtion getNome(){
-    return $this->nome;
+  public function getName(){
+    return $this->name;
   }
-  public function setNome($n){
+  public function setName($n){
     // ucwords para que toda primeira letra seja maiuscula, levando em conta que se trata de nome
-    $this->nome = ucwords(trim($n));
+    $this->name = ucwords(trim($n));
   }
   public function getEmail(){
     return $this->email;
@@ -26,5 +26,12 @@ class Usuario{
     $this->email = strtolower(trim($e));
   }
 }
-
+// interface do usuário, ela é opçional, contudo vai deixar o sistema mais confiavel
+interface UsuarioDao{
+  public function add(Usuario $u);
+  public function findAll();
+  public function findById($id);
+  public function update(Usuario $u);
+  public function delete($id);
+}
 ?>

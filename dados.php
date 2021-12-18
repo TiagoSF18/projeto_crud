@@ -1,12 +1,10 @@
 <?php
 require 'config.php';
-$lista = [];
-// seleciona os campos na tabela do banco de dados
-$sql = $pdo->query("SELECT * FROM  usuarios");
-// função para realizar a associação com o banco de dados, se tem ou não algum dado
-if($sql->rowCount()>0){
-  $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
-}
+require 'dao/UsuarioDaoMySQL.php';
+
+$usuarioDao = new UsuarioDaoMySQL($pdo);
+$lista = $usuarioDao->findAll();
+
 
 ?>
 
@@ -41,13 +39,13 @@ if($sql->rowCount()>0){
     <?php foreach($lista as $usuarios): ?>
       <tr>
         <!-- <th scope="row"></th> -->
-        <td><?=$usuarios['id'];?></td>
-        <td><?=$usuarios['name'];?></td>
-        <td><?=$usuarios['email'];?></td>
+        <td><?=$usuarios->getId();?></td>
+        <td><?=$usuarios->getName();?></td>
+        <td><?=$usuarios->getEmail();?></td>
         <td>
           <!-- o php no href envia o id via get para os arquivos editar e excluir -->
-          <a href="editar.php?id=<?=$usuarios['id'];?>">[editar]</a>
-          <a href="excluir.php?id=<?=$usuarios['id'];?>" onclick="return confirm('Confirmar exclusão?')">[excluir]</a>
+          <a href="editar.php?id=<?=$usuarios->getId();?>">[editar]</a>
+          <a href="excluir.php?id=<?=$usuarios->getId();?>" onclick="return confirm('Confirmar exclusão?')">[excluir]</a>
 
         </td>
       </tr>
