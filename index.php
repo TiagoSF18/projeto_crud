@@ -39,45 +39,45 @@ require 'config.php';
 
           <!-- Lista de opções -->
           <nav class="navbar navbar-light bg-light fixed-top">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Projeto</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Projeto</h5>
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-12">
-              <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" style="float:left" aria-current="page" href="adicionar.php" target="_blank">Adicionar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" style="float:left" aria-current="page" href="dados.php">Dados</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" style="float:left" aria-current="page" href="#">Sair</a>
-                  </li>
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Projeto</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Projeto</h5>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-12">
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                          <a class="nav-link active" style="float:left" aria-current="page" href="adicionar.php" target="_blank">Adicionar</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" style="float:left" aria-current="page" href="dados.php">Dados</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" style="float:left" aria-current="page" href="#">Sair</a>
+                        </li>
 
-                </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-    <!-- fim da row do navbar -->
-  </div>
-</header>
-<main>
+          </nav>
+          <!-- fim da row do navbar -->
+        </div>
+      </header>
+      <main>
 
-  <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</main>
+        <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      </main>
 
 
-</body>
-</html>
+    </body>
+    </html>

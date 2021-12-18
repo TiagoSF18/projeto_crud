@@ -25,31 +25,31 @@ $lista = $usuarioDao->findAll();
   <tbody>
 
     <!-- <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr> -->
-    <?php foreach($lista as $usuarios): ?>
-      <tr>
-        <!-- <th scope="row"></th> -->
-        <td><?=$usuarios->getId();?></td>
-        <td><?=$usuarios->getName();?></td>
-        <td><?=$usuarios->getEmail();?></td>
-        <td>
-          <!-- o php no href envia o id via get para os arquivos editar e excluir -->
-          <a href="editar.php?id=<?=$usuarios->getId();?>">[editar]</a>
-          <a href="excluir.php?id=<?=$usuarios->getId();?>" onclick="return confirm('Confirmar exclusão?')">[excluir]</a>
+    <th scope="row">2</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+  <th scope="row">3</th>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr> -->
+<?php foreach($lista as $usuarios): ?>
+  <tr>
+    <!-- <th scope="row"></th> -->
+    <td><?=$usuarios->getId();?></td>
+    <td><?=$usuarios->getName();?></td>
+    <td><?=$usuarios->getEmail();?></td>
+    <td>
+      <!-- o php no href envia o id via get para os arquivos editar e excluir -->
+      <a href="editar.php?id=<?=$usuarios->getId();?>">[editar]</a>
+      <a href="excluir.php?id=<?=$usuarios->getId();?>" onclick="return confirm('Confirmar exclusão?')">[excluir]</a>
 
-        </td>
-      </tr>
+    </td>
+  </tr>
 
-    <?php endforeach; ?>
-  </tbody>
+<?php endforeach; ?>
+</tbody>
 </table>
