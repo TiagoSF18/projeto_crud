@@ -10,5 +10,6 @@ if($id) {
 
   header("Location: dados.php");
   exit;
+}
 
   ?>
